@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+  <include file="$(find omni_robot)/launch/omni_robot_core.launch" />
+  <node name="uvc_camera" pkg="uvc_camera" type="uvc_camera_node" />
+  <node name="rqt_image_view" pkg="rqt_image_view" type="rqt_image_view" args="/image_raw" required="true" />
+  <node name="face_search" pkg="myface_recognition" type="face_search.py" required="true" output="screen" />
+</launch>
